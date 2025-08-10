@@ -12,3 +12,6 @@ COPY ./01/01/task.py .
 
 FROM python-base AS task-01-02
 COPY ./01/02/task.py .
+
+FROM python-base AS task-02-01
+COPY ./02/01/task.py .
