@@ -1,15 +1,16 @@
 services:
-  task-01-01:
+  task:
     build:
       context: .
-      dockerfile: Dockerfile
+  task-01-01:
+    extends: task
+    build:
       target: task-01-01
     ports:
-      - "20101:8080"
+      - "${BASE_PORT}0101:8080"
   task-01-02:
+    extends: task
     build:
-      context: .
-      dockerfile: Dockerfile
       target: task-01-02
     ports:
-      - "20102:8080"
+      - "${BASE_PORT}0102:8080"
