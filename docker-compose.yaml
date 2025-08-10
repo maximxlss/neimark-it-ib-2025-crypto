@@ -1,15 +1,16 @@
 services:
-  task:
-    build:
-      context: .
   task-01-01:
-    extends: task
+    extends:
+      file: docker-compose-common.yaml
+      service: task
     build:
       target: task-01-01
     ports:
       - "${BASE_PORT}0101:8080"
   task-01-02:
-    extends: task
+    extends:
+      file: docker-compose-common.yaml
+      service: task
     build:
       target: task-01-02
     ports:
