@@ -1,0 +1,14 @@
+FROM python:3.12-slim AS python-base
+
+RUN apt-get update && apt-get install -y socat
+
+WORKDIR /app
+
+CMD ["socat", "TCP-LISTEN:8080,fork,reuseaddr", "EXEC:python task.py,stderr"]
+EXPOSE 8080
+
+FROM python-base AS task-01-01
+COPY ./01/01/task.py .
+
+FROM python-base AS task-01-02
+COPY ./01/02/task.py .

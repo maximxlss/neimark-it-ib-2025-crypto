@@ -1,0 +1,15 @@
+services:
+  task-01-01:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: task-01-01
+    ports:
+      - "20101:8080"
+  task-01-02:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: task-01-02
+    ports:
+      - "20102:8080"
