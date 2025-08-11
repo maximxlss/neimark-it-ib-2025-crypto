@@ -39,3 +39,11 @@ services:
       target: task-02-01
     ports:
       - "${BASE_PORT}0201:8080"
+  task-02-02:
+    extends:
+      file: docker-compose-common.yaml
+      service: task
+    build:
+      target: task-02-02
+    ports:
+      - "${BASE_PORT}0202:8080"
