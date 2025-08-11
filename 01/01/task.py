@@ -12,8 +12,3 @@ if s == b:
     print("neimark{m4th1ng_th1ng_0c380aed}")
 else:
     print(f"Неверно! Правильный ответ: {b:05d}")
-
-
-01.01. Фибоначчи
-Криптография
-nc ctf.neimark-it.ru 20101
