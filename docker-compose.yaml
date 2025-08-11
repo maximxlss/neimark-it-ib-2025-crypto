@@ -36,7 +36,9 @@ services:
       file: docker-compose-common.yaml
       service: task
     build:
-      target: task-02-01
+      target: python-base
+    volumes:
+      - ./02/01/:/app/:ro
     ports:
       - "${BASE_PORT}0201:8080"
   task-02-02:
@@ -44,7 +46,9 @@ services:
       file: docker-compose-common.yaml
       service: task
     build:
-      target: task-02-02
+      target: python-base
+    volumes:
+      - ./02/02/:/app/:ro
     ports:
       - "${BASE_PORT}0202:8080"
   task-02-03:
