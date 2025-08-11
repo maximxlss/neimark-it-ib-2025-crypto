@@ -1,3 +1,4 @@
+name: crypto
 services:
   task-01-01:
     extends:
