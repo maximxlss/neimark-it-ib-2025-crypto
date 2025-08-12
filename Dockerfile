@@ -38,6 +38,9 @@ COPY ./02/01/task.py .
 FROM python-base AS task-02-02
 COPY ./02/02/task.py .
 
+FROM python-base AS task-02-06
+COPY ./02/06/task.py .
+
 
 FROM python-base AS flask-base
 RUN pip install flask pycryptodome
