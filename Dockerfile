@@ -7,6 +7,7 @@ WORKDIR /app
 CMD ["socat", "TCP-LISTEN:8080,fork,reuseaddr", "EXEC:python task.py,stderr"]
 EXPOSE 8080
 
+
 FROM python-base AS task-01-01
 COPY ./01/01/task.py .
 
@@ -37,8 +38,11 @@ COPY ./02/01/task.py .
 FROM python-base AS task-02-02
 COPY ./02/02/task.py .
 
+
 FROM python-base AS flask-base
 RUN pip install flask pycryptodome
+CMD ["python", "app.py"]
+
 
 FROM flask-base AS task-02-03
 COPY ./02/03/static static
@@ -51,5 +55,3 @@ COPY ./02/04/task.py app.py
 FROM flask-base AS task-02-05
 COPY ./02/05/static static
 COPY ./02/05/task.py app.py
-
-CMD ["python", "app.py"]
