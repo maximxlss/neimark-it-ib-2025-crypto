@@ -37,10 +37,19 @@ COPY ./02/01/task.py .
 FROM python-base AS task-02-02
 COPY ./02/02/task.py .
 
-FROM python-base AS task-02-03
-
+FROM python-base AS flask-base
 RUN pip install flask pycryptodome
+
+FROM flask-base AS task-02-03
 COPY ./02/03/static static
 COPY ./02/03/task.py app.py
+
+FROM flask-base AS task-02-04
+COPY ./02/04/static static
+COPY ./02/04/task.py app.py
+
+FROM flask-base AS task-02-05
+COPY ./02/05/static static
+COPY ./02/05/task.py app.py
 
 CMD ["python", "app.py"]

@@ -1,0 +1,273 @@
+/*
+Header
+ */
+
+header{
+  position: fixed;
+  top: 0;
+  height: 3em;
+  font-weight: 600;
+  font-family: 'IBM Plex Mono', Andale Mono, AndaleMono, monospace;
+  text-transform: uppercase;
+  color: #feb32b;
+  font-size: 1.5em;
+  padding: 1rem 1.2rem;
+  width: calc(100%);
+  background-color: #0c1221;
+  z-index: 10000;
+}
+
+header a, header a:visited, a:hover{
+  color: #feb32b;
+}
+
+/*
+General
+ */
+
+code{
+  font-family: 'IBM Plex Mono', Andale Mono, AndaleMono, monospace;
+  line-height: 1.24em;
+}
+
+pre.sourceBlock{
+  margin: 2em 1em;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+main{
+  margin: 0 3em;
+}
+
+
+main code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #feb32b;
+    background-color: #ffffff10;
+    border-radius: 4px;
+    word-break: break-all;
+}
+
+h1{
+  font-size: 2.8em;
+}
+
+/*
+wrap
+ */
+
+ .largeFlex{
+   display: flex;
+   justify-content: space-around;
+ }
+
+ .largeFlex .challengeWrap{
+   width: 50%
+ }
+
+ .largeFlex .sourceWrap{
+   width: 50%;
+ }
+
+
+
+/*
+Description
+ */
+
+.diagramContainer{
+  margin: 4em 0;
+  text-align: center;
+}
+
+.diagramContainer img{
+  max-width: 100%;
+}
+
+html.light-mode .svgDiagram{
+  filter: invert(1);
+}
+
+
+/*
+Forms
+ */
+
+ .input-field label{
+   pointer-events: none;
+ }
+
+ .challengeWrap form{
+   margin-bottom: 4em;
+ }
+
+ .challengeWrap form:last-of-type{
+   margin-bottom: 0em;
+ }
+
+.helper-text{
+  font-size: 0.8em;
+}
+
+.errorMessage{
+  color: #F44336;
+}
+
+.challenge-button{
+  text-align: right;
+  margin: 0.5em 0
+}
+
+.challenge-button-only{
+  text-align: right;
+  margin: 2em 0 1em 0;
+}
+
+.challenge-card{
+  margin-top: 2em;
+  padding: 1em;
+}
+
+h5.functionName{
+  color: #e85154;
+  font-size: 1.6em;
+  margin-top: 0.7em;
+  margin-left: 0.5em;
+}
+
+input[type='text'].hexinput{
+  margin: 0 0 2px 0
+}
+
+
+/*
+Results
+ */
+
+ .results{
+   margin: 3em 1em;
+   padding: 2em;
+   word-wrap: break-word;
+ }
+
+ .results h5{
+   margin-top: 0;
+   margin-left: 0em;
+ }
+
+ #results{
+   color: #feb32b;
+   font-family: 'IBM Plex Mono';
+ }
+
+ html.light-mode #results{
+   color: #6420e0;
+ }
+
+ #xorResult{
+   word-break: break-all;
+ }
+
+ /*
+convert form
+  */
+
+.convertForm{
+  padding: 2em;
+}
+
+.convertForm h5{
+  margin: 0.82rem 0 2em 0;
+}
+
+.convertForm h6{
+  font-size: 1.3em;
+  margin: 0 0 0.5em 0;
+}
+
+.convertForm .dropdown-content li span{
+  font-size: 1em!important;
+}
+
+.convertForm textarea{
+  font-family: 'IBM Plex Mono', Andale Mono, AndaleMono, monospace;
+}
+
+.convertForm form{
+  margin-top: 0.5em;
+}
+
+.convertWrap{
+  display: flex;
+  flex-direction: row;
+}
+
+.encodingResult{
+  word-wrap: break-word;
+  margin: 1.5em 0;
+  font-family: 'IBM Plex Mono', Andale Mono, AndaleMono, monospace;
+}
+
+.selectTextarea{
+  display: flex;
+  flex-direction: column;
+}
+
+.chr-counter{
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+
+.formFix{
+  padding: 0!important;
+}
+
+@media only screen and (max-width : 992px) {
+
+  .largeFlex{
+    flex-direction: column;
+  }
+
+  .largeFlex .challengeWrap, .largeFlex .sourceWrap{
+    width: 100%;
+  }
+
+}
+
+
+/* SMALL */
+@media only screen and (max-width : 600px) {
+  main{
+    margin: 0 12px;
+  }
+
+  pre.sourceBlock{
+    margin: 0 12px;
+  }
+
+  .results{
+    margin: 2em 12px;
+    padding: 1.5em;
+  }
+
+  .challenge-button .btn{
+    margin: 1em 0;
+    width: calc(100%);
+  }
+  .challenge-button-only .btn{
+    margin: 0;
+    width: calc(100%);
+  }
+
+  .convertForm{
+    padding: 1.5em;
+  }
+
+}
+
+
+html.light-mode header{
+  background-color: #fff;
+}
