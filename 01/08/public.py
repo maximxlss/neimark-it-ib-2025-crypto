@@ -7,7 +7,9 @@ a = random.randrange(1, p)
 print(f"{a = }")
 
 e = int(input("? e = "))
-if pow(a, e, p) == 1:
+if e == 0:
+    print("Nah too easy")
+elif pow(a, e, p) == 1:
     print("neimark{REDACTEDREDACTEDREDACTEDREDACTED}")
 else:
     print("Wrong!")
