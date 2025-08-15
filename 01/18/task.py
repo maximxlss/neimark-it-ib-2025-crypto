@@ -58,14 +58,12 @@ class Khafre:
 if __name__ == "__main__":
     cipher = Khafre(os.urandom(8))
 
-    encrypted_flag = cipher.encrypt(b"neimark{REDACTEDREDACTEDREDACTEDREDACTED}")
+    encrypted_flag = cipher.encrypt(b"neimark{unr34l_p0w3r_48af872f}")
     print("Flag:", encrypted_flag.hex())
 
-    print(f"For now, here is your key: {cipher.key.hex()}")
+    for _ in range(100):
+        pt = bytes.fromhex(input("Try my encryption > "))
+        ct = cipher.encrypt(pt)
+        print("Result:", ct.hex())
 
-    # for _ in range(100):
-    #     pt = bytes.fromhex(input("Try my encryption > "))
-    #     ct = khufu.encrypt(pt)
-    #     print("Result:", ct.hex())
-
-    # print("Enough already.")
+    print("Enough already.")
