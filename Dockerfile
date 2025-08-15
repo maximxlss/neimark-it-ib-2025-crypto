@@ -48,6 +48,7 @@ FROM python-base AS task-02-02
 COPY ./02/02/task.py .
 
 FROM python-base AS task-02-06
+RUN pip install Pycryptodome
 COPY ./02/06/task.py .
 
 

@@ -5,7 +5,7 @@ from Crypto.Util.Padding import pad, unpad
 from base64 import b64encode, b64decode
 
 
-FLAG = "miactf{p1s_d0n7_us3_AES_f0r_0th3r_purp0s3s_w1th0ut_th1nk1ng}"
+FLAG = "neimark{43s_1s_v3ry_s4f3_but_1f_us3d_c0rr3ctly_251e2ea7}"
 SECRET_KEY = os.urandom(32)
 
 
