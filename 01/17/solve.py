@@ -1,5 +1,3 @@
-import os
-
 
 def xor(a, b):
     assert len(a) == len(b)
@@ -17,55 +15,47 @@ def rotr(a, n):
 SBOX = [b"d\xf9\x00\x1b", b"\xfe\xdd\xcd\xf6", b"|\x8f\xf1\xe2", b"\x11\xd7\x15\x14", b"\x8b\x8c\x18\xd3", b"\xdd\xdf\x88\x1e", b"n\xabPV", b"\x88\xce\xd8\xe1", b"I\x14\x89Y", b"i\xc5o\xd5", b"\xb7\x99O\x03", b"\x0f\xbc\xee>", b"<&I@", b"!U~X", b"\xe1K?\xc2", b".\\\xf5\x91", b"\xdc\xef\xf8\xce", b"\t*\x16H", b"\xbe\x81)6", b"\xff{\x0cj", b"\xd5%\x107", b"\xaf\xa4H\xf1", b"}\xaf\xc9Z", b"\x1e\xa6\x9c?", b"\xa4\x17\xab\xe7", b"X\x90\xe4#", b"\xb0\xcbp\xc0", b"\xc8P%\xf7", b"$M\x97\xe3", b"\x1f\xf3Y_", b"\xc4\xecc\x96", b"Y\x18\x1e\x17", b"\xe65\xb4w", b"5N}\xbf", b"yowS", b"f\xebR\xcc", b"w\xc3\xf9\x95", b"2\xe3\xa9'", b"\x80\xcc\xae\xd6", b"N+\xe8\x9d", b"7[\xbd(", b"\xad\x1a=\x05", b"+\x1bB\xb3", b"\x16\xc4Lq", b"MT\xbf\xa8", b"\xe5}\xdcz", b"\xecm\x81D", b"Zq\x04k", b'\xd8"\x96P', b"\x87\xfc\x8f$", b"\xcb\xc6\x0e\t", b"\xb69\x03f", b"\xd9\xf7`\x92", b"\xd3\x93\xa7\x0b", b"\x1d1\xa0\x8a", b"\x9c\xd9q\xc9", b"\\\x1e\xf4E", b"\x86\xfa\xb6\x94", b"\xfd\xb4Ae", b"\x8e\xaa\xfc\xbe", b"K\xca\xc6\xeb", b"\xfbz\x94\xe5", b"W\x89\xd0N", b"\xfa\x13\xcf5", b"#k\x8d\xa9", b"A3\xf0\x00", b"b$&\x1c", b"\xf4\x12\xf2;", b"\xe7^V\xa4", b"0\x02!\x16", b"\xba\xf1\x7f\x1f", b"\xd0\x98r\xf9", b"\xc1\xa3i\x9c", b"\xf1\xe8\x02\xaa", b"\r\xd1E\xdc", b"O\xdc\xe0\x93", b"\x8d\x84\x12\xf0", b"l\xd0\xf3v", b"=\xe6\xb7=", b"\x84\xbas\x7f", b"\xb4:0\xf2", b"DV\x9fi", b"\x00\xe4\xea\xca", b"\xb5\x8d\xe3\xb0", b"\x95\x91\x13\xc8", b"\xd6.\xfe\xe9", b"\x90\x86\x1f\x83", b"\xce\xd6\x98t", b"/y<\xee", b"\xe8W\x1c0", b"H6e\xd1", b"\xab\x07\xb01", b"\x91L\x84O", b"\x15\xbf;\xe8", b",?*\x9a", b"\x9e\xb9_\xd4", b"\x92\xe7G-", b'"\x97\xcc[', b"\xee_'\x82", b"Sw\xb5b", b"\xdb\x8e\xbb\xcf", b"\xf9a\xde\xdd", b"\xc5\x9b\\`", b"\x1b\xd3\x91\r", b"&\xd2\x06\xad", b"\xb2\x85\x14\xd8", b"^\xcfkR", b"\x7f\xeax\xbb", b"PHy\xac", b"\xed4\xa8\x84", b"6\xe5\x1d<", b"\x17St\x1d", b"\x8cG\xca\xed", b"\x9d\n@\xef", b"1E\xe2!", b"\xda'\xebp", b"\xdfs\x0b\xa3", b"\x18<\x87\x89", b"s\x9a\xc0\xa6", b"\x9aX\xdf\xc6", b"T\xb14\xc1", b"\xac>$.", b"\xccI9\x02", b"{-\xda\x99", b"\x8f\x15\xbc\x01", b")\xfd8\xc7", b"'\xd51\x8f", b"`J\xaf\xf5", b"\xf2\x9ch\x18", b"\xc3\x8a\xa2\xec", b"\x10\x19\xd4\xc3", b"\xa8\xfb\x93n", b" \xed{9", b"\x0bha\x19", b"\x89\xa0\x90o", b"\x1c\xc7\x82\x9e", b"\x99R\xefK", b"\x85\x0e\x9e\x8c", b"\xcd\x06:\x90", b"g\x00/\x8e", b"\xcf\xac\x8c\xb7", b"\xea\xa2K\x11", b"\x98\x8bNl", b"F\xf0f\xdf", b"\xca~\xec\x08", b"\xc7\xbb\xa6d", b"\x83\x1d\x17\xbd", b"c\xf5u\xe6", b"\x97d5\x0e", b"G\x87\rB", b"\x02l\xa4\xa2", b"\x81g\xd5\x87", b"a\xb6\xad\xab", b"\xaaed\xd2", b"p\xda#{", b"%\xe1\xc7J", b"\xa1\xc9\x01\xa0", b"\x0e\xb0\xa5\xda", b"vp\xf7A", b"Q\xc0Z\xea", b"\x93=\xfa2", b"\x07Y\xff\x1a", b"V\x01\n\xb8", b"_\xde\xcbx", b"?2\xed\xf8", b"\xae\xbe\xdb\xb9", b"9\xf82m", b"\xd2\x08X\xc5", b"\x9bc\x8b\xe4", b"\xa5r\xc8\n", b"(\xe0\xa1\x9f", b"C \x99\xfc", b":7\xc3\xcd", b"\xbf\x95\xc5\x85", b"\xb3\x92\xc1*", b"j\xa7\x07\xd7", b"R\xf6ja", b"\x12\xd4\x83\xb1", b"\x96C[^", b">u\x80+", b";\xa5+3", b"\xa9\x9fQ\xa5", b"\xbd\xa1\xe1W", b"x\xc2\xe7\x0c", b"\xfc\xae|\xe0", b'\xd1`"g', b"*\xff\xacM", b"JQ\tG", b"\n\xb2\xb8:", b"z\x04\xe5y", b"4\r\xfd\x80", b'\xb9\x16\xe9"', b"\xe2\x9d^\x9b", b"\xf5bJ\xf4", b"L\xa9\xd9\xaf", b"k\xbd,\xfe", b"\xe3\xb7\xf6 ", b"\xc2tn\x07", b"[B\xb9\xb6", b"\xa0i\x19\xbc", b"\xf0\xf2\xc4\x0f", b"r!z\xb5", b"\x14\xc1\x9d\xf3", b"\xf3\x80-\xae", b"\xe0\x94\xbe\xb4", b"\xa2\x10\x1a\xff", b"\x05)W]", b"U\xcd\xb2|", b"\xa3;\xdd\xb2", b"e(\xb3}", b"t\x0c\x05\xdb", b"\xe9jb\xc4", b"@x(F", b"m0\xd7\x06", b"\xbb\xf4\x8e,", b"\xbc\xe2\xd3\xde", b"\x04\x9e7\xfa", b"\x01\xb5\xe64", b"-\x88m\x8d", b"~Z.~", b"\xd7A \x13", b"\x06\xe9\x0f\x97", b"\xe4]>\xba", b"\xb8\xad3\x86", b"\x13\x05\x1b%", b"\x0c\x03ST", b"q\xc8\x9bu", b"\xc68\xfb\xd0", b"\x19\x7f\x11\xa1", b"\xef\x0f\x08\xfb", b"\xf8D\x86Q", b"8@\x95c", b"E/DC", b"]FMU", b"\x03\xd8vL", b"\xb1\xb8\xd68", b"\xa7\x0b\xba/", b"\x94\xb3\xd2\x10", b"\xebf\x92\xa7", b"\xd4\t\xc2\xd9", b"h\x83\x85&", b"\xa6\xdb\x8a\x15", b"u\x1fl\x98", b"\xdev\x9a\x88", b"\xc9\xeeFh", b"\x1a\x82\xa3s", b"\x08\x96\xaaI", b"B#6\x81", b"\xf6,U\xcb", b"\x9f\x1cT\x04", b"\xf7O\xb1\\", b"\xc0nC\x12", b"o\xfe]r", b"\x8a\xa8g\x8b", b"3|\xd1)", b"\x82\x11\xce\xfd"]
 # fmt: on
 
-ROTATION_SCHEDULE = [16, 16, 8, 8, 16, 16, 24, 24]
+
+p1 = bytes([0, 0, 0, 0, 0, 0, 0, 0])
+
+print(f"{p1.hex() = }")
+
+c1 = bytes.fromhex(input("? c1 = "))[:8]
 
 
-class Khafre:
-    def __init__(self, key: bytes, n_rounds: int = 8):
-        # using 8 byte key
-        assert len(key) == 8
 
-        self.key = key
-        self.n_rounds = n_rounds
+p2 = bytes([0, 0, 1, 0, 0, 0, 0, 0])
 
-    def encrypt_block(self, block: bytes) -> bytes:
-        assert len(block) == 8
-        block = xor(block, self.key)
-        left, right = block[:4], block[4:]
+print(f"{p2.hex() = }")
 
-        for i in range(self.n_rounds):
-            left = xor(left, SBOX[right[-1]])
-            right = rotr(right, ROTATION_SCHEDULE[i])
-            left, right = right, left
+c2 = bytes.fromhex(input("? c2 = "))[:8]
 
-        ct = xor(left + right, self.auxkeys[1])
-        return ct
-
-    def encrypt(self, pt: bytes) -> bytes:
-        # PKCS#7 padding
-        padding_len = 8 - (len(pt) % 8)
-        pt += bytes([padding_len] * padding_len)
-
-        ct = bytearray()
-        for i in range(0, len(pt), 8):
-            block = pt[i : i + 8]
-            ct.extend(self.encrypt_block(block))
-        ct = bytes(ct)
-
-        return ct
+sbox_diff = xor(c1, c2)[4:]
+possibilities1 = []
+for x in range(256):
+    if xor(SBOX[x], SBOX[x ^ 1]) == sbox_diff:
+        possibilities1.append(x)
 
 
-if __name__ == "__main__":
-    cipher = Khafre(os.urandom(8))
+# go another time with almost the same data to get an exact solution
 
-    encrypted_flag = cipher.encrypt(b"neimark{REDACTEDREDACTEDREDACTEDREDACTED}")
-    print("Flag:", encrypted_flag.hex())
+p2 = bytes([0, 0, 2, 0, 0, 0, 0, 0])
 
-    print(f"For now, here is your key: {cipher.key.hex()}")
+print(f"{p2.hex() = }")
 
-    # for _ in range(100):
-    #     pt = bytes.fromhex(input("Try my encryption > "))
-    #     ct = khufu.encrypt(pt)
-    #     print("Result:", ct.hex())
+c2 = bytes.fromhex(input("? c2 = "))[:8]
 
-    # print("Enough already.")
+sbox_diff = xor(c1, c2)[4:]
+possibilities2 = []
+for x in range(256):
+    if xor(SBOX[x], SBOX[x ^ 2]) == sbox_diff:
+        possibilities2.append(x)
+
+possibilities = set(possibilities1) & set(possibilities2)
+assert len(possibilities) == 1
+that_byte_result = next(x for x in possibilities)
+
+key2 = that_byte_result ^ c1[2]
+
+print(f"{key2 = }")
+

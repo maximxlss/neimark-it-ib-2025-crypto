@@ -38,7 +38,7 @@ class Khafre:
             right = rotr(right, ROTATION_SCHEDULE[i])
             left, right = right, left
 
-        ct = xor(left + right, self.auxkeys[1])
+        ct = xor(left + right, self.key)
         return ct
 
     def encrypt(self, pt: bytes) -> bytes:
@@ -56,16 +56,27 @@ class Khafre:
 
 
 if __name__ == "__main__":
-    cipher = Khafre(os.urandom(8))
+    print("Guess the third key byte four times and I'll believe your strength.")
 
-    encrypted_flag = cipher.encrypt(b"neimark{REDACTEDREDACTEDREDACTEDREDACTED}")
-    print("Flag:", encrypted_flag.hex())
+    for _ in range(4):
+        key = os.urandom(8)
+        cipher = Khafre(key)
 
-    print(f"For now, here is your key: {cipher.key.hex()}")
+        for _ in range(100):
+            pt = bytes.fromhex(input("Try my encryption > "))
+            if len(pt) == 0:
+                # stop
+                break
+            ct = cipher.encrypt(pt)
+            print("Result:", ct.hex())
+        else:
+            print("Enough already.")
 
-    # for _ in range(100):
-    #     pt = bytes.fromhex(input("Try my encryption > "))
-    #     ct = khufu.encrypt(pt)
-    #     print("Result:", ct.hex())
+        guess = int(input("? key[2] = "))
+        if key[2] != guess:
+            print(f"Wrong! {key[2] = }")
+            exit()
+        else:
+            print("Great")
 
-    # print("Enough already.")
+    print("neimark{REDACTEDREDACTEDREDACTEDREDACTED}")
