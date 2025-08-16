@@ -41,6 +41,9 @@ COPY ./01/12/task.py .
 FROM python-base AS task-01-14
 COPY ./01/14/task.py .
 
+FROM python-base AS task-01-17
+COPY ./01/17/task.py .
+
 FROM python-base AS task-02-01
 COPY ./02/01/task.py .
 
