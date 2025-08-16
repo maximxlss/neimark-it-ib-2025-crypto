@@ -88,30 +88,6 @@ services:
       target: task-01-14
     ports:
       - "${BASE_PORT}0114:8080"
-  task-01-16:
-    extends:
-      file: docker-compose-common.yaml
-      service: task
-    build:
-      target: task-01-16
-    ports:
-      - "${BASE_PORT}0116:8080"
-  task-01-17:
-    extends:
-      file: docker-compose-common.yaml
-      service: task
-    build:
-      target: task-01-17
-    ports:
-      - "${BASE_PORT}0117:8080"
-  task-01-18:
-    extends:
-      file: docker-compose-common.yaml
-      service: task
-    build:
-      target: task-01-18
-    ports:
-      - "${BASE_PORT}0118:8080"
   task-02-01:
     extends:
       file: docker-compose-common.yaml
@@ -160,3 +136,27 @@ services:
       target: task-02-06
     ports:
       - "${BASE_PORT}0206:8080"
+  task-02-07:
+    extends:
+      file: docker-compose-common.yaml
+      service: task
+    build:
+      target: task-02-07
+    ports:
+      - "${BASE_PORT}0207:8080"
+  task-02-08:
+    extends:
+      file: docker-compose-common.yaml
+      service: task
+    build:
+      target: task-02-08
+    ports:
+      - "${BASE_PORT}0208:8080"
+  task-02-09:
+    extends:
+      file: docker-compose-common.yaml
+      service: task
+    build:
+      target: task-02-09
+    ports:
+      - "${BASE_PORT}0209:8080"

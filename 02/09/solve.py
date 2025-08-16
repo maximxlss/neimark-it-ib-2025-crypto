@@ -104,7 +104,8 @@ class Khafre:
         return left + right
 
 
-pi = process(["python", "task.py"])
+# pi = process(["python", "task.py"])
+pi = remote("neimark", 20118)
 
 pi.recvuntil("Flag:")
 encrypted_flag = bytes.fromhex(pi.recvline().strip().decode())

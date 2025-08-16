@@ -41,15 +41,6 @@ COPY ./01/12/task.py .
 FROM python-base AS task-01-14
 COPY ./01/14/task.py .
 
-FROM python-base AS task-01-16
-COPY ./01/16/task.py .
-
-FROM python-base AS task-01-17
-COPY ./01/17/task.py .
-
-FROM python-base AS task-01-18
-COPY ./01/18/task.py .
-
 FROM python-base AS task-02-01
 COPY ./02/01/task.py .
 
@@ -77,3 +68,13 @@ COPY ./02/04/task.py app.py
 FROM flask-base AS task-02-05
 COPY ./02/05/static static
 COPY ./02/05/task.py app.py
+
+FROM python-base AS task-02-07
+COPY ./02/07/task.py .
+
+FROM python-base AS task-02-08
+COPY ./02/08/task.py .
+
+FROM python-base AS task-02-09
+COPY ./02/09/task.py .
+
