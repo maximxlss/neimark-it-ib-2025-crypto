@@ -1,0 +1,47 @@
+id,name,description,attribution,connection_info,next_id,max_attempts,value,category,type,state,logic,requirements
+14,02.01. XOR,,,nc ctf.neimark-it.ru 20201,,0,25,Криптография,standard,visible,any,
+15,01.01. Фибоначчи,,,nc ctf.neimark-it.ru 20101,,0,25,Криптография,standard,visible,any,
+16,01.02. Умножение,,,nc ctf.neimark-it.ru 20102,,0,50,Криптография,standard,visible,any,
+17,01.03. Квадратное,"Информация:
+* [sagemath sqrt](https://doc.sagemath.org/html/en/reference/finite_rings/sage/rings/finite_rings/integer_mod.html#sage.rings.finite_rings.integer_mod.IntegerMod_abstract.sqrt)",,nc ctf.neimark-it.ru 20103,,0,75,Криптография,standard,visible,any,
+19,02.02. XOR 2,,,nc ctf.neimark-it.ru 20202,,0,35,Криптография,standard,visible,any,
+20,02.03. ECBCBCWTF,Альтернативный сервер: [https://aes.cryptohack.org/ecbcbcwtf/](https://aes.cryptohack.org/ecbcbcwtf/),,http://ctf.neimark-it.ru:20203/,,0,40,Криптография,standard,visible,any,
+21,03.01. Метаданные,,,,,0,10,Стеганография,standard,visible,any,
+22,03.02. book of secrets,"уцуцуга, пароль надо перебирать",,,,0,60,Стеганография,standard,visible,any,
+23,03.03. Не метаданные,,,,,0,15,Стеганография,standard,visible,any,
+24,03.04. Аудио,,,,,0,15,Стеганография,standard,visible,any,
+25,03.05. invisible lsb,см. zsteg,,,,0,20,Стеганография,standard,visible,any,
+26,03.06. snow,,,,,0,20,Стеганография,standard,visible,any,
+27,03.07. lirili larila,,,,,0,50,Стеганография,standard,visible,any,
+28,03.08. zero width,,,,,0,30,Стеганография,standard,visible,any,
+29,03.09. no flag,,,,,0,40,Стеганография,standard,visible,any,
+30,03.10. lsb,,,,,0,70,Стеганография,standard,visible,any,
+31,01.04. LCG,,,nc ctf.neimark-it.ru 20104,,0,60,Криптография,standard,visible,any,
+32,01.05. Обратное,,,nc ctf.neimark-it.ru 20105,,0,35,Криптография,standard,visible,any,
+33,01.06. Сложение,,,nc ctf.neimark-it.ru 20106,,0,30,Криптография,standard,visible,any,
+34,01.07. not rsa,"Информация:
+* [Малая теорема Ферма](https://ru.m.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)",,nc ctf.neimark-it.ru 20107,,0,80,Криптография,standard,visible,any,
+35,01.08. fermat,"Информация:
+* [Малая теорема Ферма](https://ru.m.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BB%D0%B0%D1%8F_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%A4%D0%B5%D1%80%D0%BC%D0%B0)",,nc ctf.neimark-it.ru 20108,,0,35,Криптография,standard,visible,any,
+36,01.09. rsa,"Информация:
+* [Теорема Эйлера](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0_(%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D1%87%D0%B8%D1%81%D0%B5%D0%BB))",,,,0,90,Криптография,standard,visible,any,
+37,02.04. ECB Oracle,"Альтернативный сервер: [https://aes.cryptohack.org/ecb_oracle/](https://aes.cryptohack.org/ecb_oracle/)
+
+Примечание: для решения таска процесс следует автоматизировать.",,http://ctf.neimark-it.ru:20204/,,0,80,Криптография,standard,visible,any,
+38,02.05. Flipping Cookie,Альтернативный сервер: [https://aes.cryptohack.org/flipping_cookie/](https://aes.cryptohack.org/flipping_cookie/),,http://ctf.neimark-it.ru:20205/,,0,60,Криптография,standard,visible,any,
+40,01.10. factor rsa,,,,,0,100,Криптография,standard,visible,any,
+41,01.11. decrypt elgamal ,"Информация:
+* [ElGamal_encryption](https://en.wikipedia.org/wiki/ElGamal_encryption)",,nc ctf.neimark-it.ru 20111,,0,60,Криптография,standard,visible,any,
+45,01.12. Pohlig-Hellman,,,nc ctf.neimark-it.ru 20112,,0,95,Криптография,standard,visible,any,
+46,01.13. ...,"Информация:
+* [Fibonacci_sequence Binet's formula](https://en.wikipedia.org/wiki/Fibonacci_sequence#Closed-form_expression)
+* [Paillier_cryptosystem дискретный логарифм](https://en.wikipedia.org/wiki/Paillier_cryptosystem#Background)",,,,0,200,Криптография,standard,visible,any,
+47,01.14. lattice (or not),,,nc ctf.neimark-it.ru 20114,,0,150,Криптография,standard,visible,any,
+49,02.06. AES web token,Расширенная версия 02.05. Flipping Cookie. Требует автоматизации. Нужно заметить не криптографическую утечку информации в скрипте в ошибке.,,nc ctf.neimark-it.ru 20206,,0,150,Криптография,standard,visible,any,
+50,01.15. epsilon,для решения задачи не нужны никакие дополнительные теоремы помимо модулярной арифметики и обратных,,,,0,150,Криптография,standard,visible,any,
+51,02.07. khafre decrypt,,,nc ctf.neimark-it.ru 20207,,0,80,Криптография,standard,visible,any,
+53,02.08. khafre one byte,"Информация:
+* [Дифференциальный криптоанализ](https://ru.wikipedia.org/wiki/%D0%94%D0%B8%D1%84%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9_%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7)
+* Начальная разница - `[0 0 a 0 | 0 0 0 0]`",,nc ctf.neimark-it.ru 20208,,0,150,Криптография,standard,visible,any,
+54,02.09. khafre ultimate,продолжение khafre one byte,,nc ctf.neimark-it.ru 20209,,0,200,Криптография,standard,visible,any,
+58,01.17. Mod DLP,,,nc ctf.neimark-it.ru 20117,,0,100,Криптография,standard,visible,any,
